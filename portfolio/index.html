@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana Valmorida | Creative Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark text-white">
+    <!-- Animated Background -->
+    <div class="bg-animation" id="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">JV<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#portfolio">Work</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-cta">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2 class="hero-greeting">Hi, I'm</h2>
+            <h1 class="hero-name">Jana Valmorida</h1>
+            <div class="typing-container">
+                <p class="hero-tagline"><span id="typing-text"></span><span class="cursor">|</span></p>
+            </div>
+            <p class="hero-desc">I transform strategies into stunning visuals that connect and convert. Creative designer bridging the gap between branding and motion.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn btn-glow">View Work</a>
+                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            </div>
+            <div class="scroll-down">
+                <a href="#about"><i data-lucide="chevron-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container grid-2">
+            <div class="about-image reveal">
+                <div class="img-wrapper">
+                    <!-- Profile Image Placeholder -->
+                    <img id="profile-img" src="assets/images/profile.jpg" alt="Jana Valmorida">
+                    <div class="img-glow"></div>
+                </div>
+            </div>
+            <div class="about-text reveal">
+                <h3 class="section-subtitle">The Creative Behind the Work</h3>
+                <h2 class="section-title">Turning Ideas into <span class="text-neon">Visual Impact</span></h2>
+                <p>I'm a Senior Graphic Designer based in Manila, Philippines. With over 4 years of experience, I specialize in crafting impactful visuals across branding, digital marketing, and motion design.</p>
+                <p>My approach is rooted in strategy—I don't just make things look good; I ensure they perform, connect, and stay true to the brand's identity.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i data-lucide="layout"></i>
+                        <span>Graphic Design</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="zap"></i>
+                        <span>Motion Design</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="palette"></i>
+                        <span>Branding</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="video"></i>
+                        <span>Video Editing</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="layers"></i>
+                        <span>UI Design</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="megaphone"></i>
+                        <span>Social Ads</span>
+                    </div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">640+</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience bg-darker" id="experience">
+        <div class="container text-center">
+            <h3 class="section-subtitle">My Journey</h3>
+            <h2 class="section-title">Work <span class="text-neon">Experience</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2020 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Freelance Graphic Designer</h3>
+                        <p class="company">Self-Employed</p>
+                        <p>Delivering high-end visual solutions for international clients across various industries, focusing on brand identity and social media growth.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>Senior Graphic Designer</h3>
+                        <p class="company">Global Creative Agency</p>
+                        <p>Led the design department in creating multi-channel marketing campaigns and conceptualizing visual strategies for top-tier brands.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2019 - 2021</div>
+                    <div class="timeline-content">
+                        <h3>Graphic Artist</h3>
+                        <p class="company">Local Print & Digital Hub</p>
+                        <p>Specialized in print design, brochure layouts, and large-format advertising materials for local corporate clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="section-subtitle">Showcase</h3>
+                <h2 class="section-title">Project <span class="text-neon">Gallery</span></h2>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="filter-container reveal">
+                <div class="filter-btns-glass">
+                    <button class="filter-btn-pill active" data-category="social">Social Media</button>
+                    <button class="filter-btn-pill" data-category="redlight">Red Light Therapy</button>
+                    <button class="filter-btn-pill" data-category="brochure">Brochures</button>
+                    <button class="filter-btn-pill" data-category="brand">Brand Identity</button>
+                    <button class="filter-btn-pill" data-category="fun">Fun Projects</button>
+                </div>
+            </div>
+
+            <div class="showcase-container" id="gallery">
+                <!-- Project 1: Social Media -->
+                <div class="project-showcase showcase-item reveal" data-category="social">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Social Media Campaigns</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="assets/images/project_social.jpg" alt="Social Media Campaign">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>Engaging and impactful social media graphics designed to boost brand presence, drive engagement, and communicate key messages effectively.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Graphic Design • Layout • Photo Editing</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Strong visual flow across posts</li>
+                                <li>Dynamic imagery + brand-aligned color palette</li>
+                                <li>Designed for digital platforms and engagement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Red Light Therapy -->
+                <div class="project-showcase showcase-item reveal" data-category="redlight">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Red Light Therapy Ads</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="assets/images/project_redlight.jpg" alt="Red Light Therapy Ad">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>High-conversion performance ads for advanced light therapy devices. Focused on clinical trust and aesthetic wellness appeal.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Ad Design • Creative Direction • Retouching</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Optimized for high CTR (Click-Through Rate)</li>
+                                <li>Technologically-driven visual aesthetic</li>
+                                <li>Consistent brand voice across variants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Brochure Design -->
+                <div class="project-showcase showcase-item reveal" data-category="brochure">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Brochure Portfolio</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="assets/images/project_brochure.jpg" alt="Brochure Design">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>Multipage editorial layouts designed for print and digital distribution. Emphasis on hierarchy and legibility.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Typography • Layout System • Pre-press</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Clean grid-based organization</li>
+                                <li>Custom iconography and data visualization</li>
+                                <li>Premium paper-feel digital presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Brand Identity -->
+                <div class="project-showcase showcase-item reveal" data-category="brand">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Visual Identity System</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="assets/images/project_brand.jpg" alt="Brand Identity">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>A comprehensive rebrand for a tech startup focusing on "Modern Minimalism". Includes logo, stationary, and digital assets.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Logo Design • Color Theory • Brand Strategy</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Scalable vector system</li>
+                                <li>Unique neon-inspired color palette</li>
+                                <li>Cohesive visual language across all touchpoints</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Fun Projects (Unique Grid Layout) -->
+                <div class="fun-projects-grid showcase-item reveal" data-category="fun">
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_1.jpg" alt="Fun 1"></div>
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_2.jpg" alt="Fun 2"></div>
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_3.jpg" alt="Fun 3"></div>
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_4.jpg" alt="Fun 4"></div>
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_5.jpg" alt="Fun 5"></div>
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_6.jpg" alt="Fun 6"></div>
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_7.jpg" alt="Fun 7"></div>
+                    <div class="fun-tile cursor-pointer"><img src="assets/images/fun_8.jpg" alt="Fun 8"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container grid-2">
+            <div class="contact-info reveal">
+                <h2 class="section-title">Let's Build Something <span class="text-neon">Incredible</span></h2>
+                <p>Have a project in mind or just want to say hi? I'm always open to new opportunities and creative collaborations.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <h4>Email Me</h4>
+                            <p>jana.olaya04@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i data-lucide="linkedin"></i>
+                        <div>
+                            <h4>Connect</h4>
+                            <p>linkedin.com/in/janavalmorida</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Manila, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container reveal">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-glow w-full">Send Message</button>
+                </form>
+                <div id="form-response" class="hidden">
+                    <p>Thanks for reaching out! I'll get back to you soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">JV<span>.</span></div>
+            <p>&copy; 2026 Jana Valmorida. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i data-lucide="behance"></i></a>
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="dribbble"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>

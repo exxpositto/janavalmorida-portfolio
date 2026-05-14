@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jana Valmorida | Creative Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons (via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-dark text-white">
+    <!-- Animated Background -->
+    <div class="bg-animation" id="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="logo">JV<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#portfolio">Project Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact" class="btn btn-primary nav-cta">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2 class="hero-greeting">Hi, I'm</h2>
+            <h1 class="hero-name">Jana Valmorida</h1>
+            <div class="typing-container">
+                <p class="hero-tagline"><span id="typing-text"></span><span class="cursor">|</span></p>
+            </div>
+            <p class="hero-desc">I transform strategies into stunning visuals that connect and convert. Creative designer bridging the gap between branding and motion.</p>
+            <div class="hero-btns">
+                <a href="#portfolio" class="btn btn-glow">View Work</a>
+                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+            </div>
+            <div class="scroll-down">
+                <a href="#about"><i data-lucide="chevron-down"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container grid-2">
+            <div class="about-image reveal">
+                <div class="img-wrapper">
+                    <!-- Placeholder Profile -->
+                    <img id="profile-img" src="portfolio/assets/images/profile.jpg" alt="Jana Valmorida">
+                    <div class="img-glow"></div>
+                </div>
+            </div>
+            <div class="about-text reveal">
+                <h3 class="section-subtitle">The Creative Behind the Work</h3>
+                <h2 class="section-title">Turning Ideas into <span class="text-neon">Visual Impact</span></h2>
+                <p>I’m a Senior Graphic Designer based in Manila, Philippines, with 4+ years of experience creating high-converting visuals for international brands. I specialize in social media creatives, image ads, branding, Amazon content, and marketing-focused design that drives engagement and strengthens brand identity.</p>
+                <p>My approach combines creativity with strategy — creating visuals that not only look polished, but also perform effectively across digital platforms and advertising campaigns.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i data-lucide="layout"></i>
+                        <span>Graphic Design</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="zap"></i>
+                        <span>Ad Creatives</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="palette"></i>
+                        <span>Branding</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="video"></i>
+                        <span>Amazon Content</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="layers"></i>
+                        <span>Social Media Design</span>
+                    </div>
+                    <div class="skill-item">
+                        <i data-lucide="megaphone"></i>
+                        <span>Marketing Visuals</span>
+                    </div>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-num">470+</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience bg-darker" id="experience">
+        <div class="container text-center">
+            <h3 class="section-subtitle">My Journey</h3>
+            <h2 class="section-title">Work <span class="text-neon">Experience</span></h2>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2023 – 2025</div>
+                    <div class="timeline-content">
+                        <h3>Graphic Designer</h3>
+                        <p class="company">J Digital Co</p>
+                        <p>Worked on branding, ad creatives, and marketing visuals for digital campaigns.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2023 – 2025</div>
+                    <div class="timeline-content">
+                        <h3>Graphic Designer</h3>
+                        <p class="company">I Want Digital Marketing</p>
+                        <p>Developed social media ads and branding visuals to boost engagement and ROI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Freelance Video Editor</h3>
+                        <p class="company">Vessbroz</p>
+                        <p>Edited high-quality video content for digital platforms and promotions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2020 – 2023</div>
+                    <div class="timeline-content">
+                        <h3>Freelance Graphic Designer</h3>
+                        <p class="company">Doggovinci</p>
+                        <p>Designed creative branding and social media content for pet-focused campaigns.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2020 – 2021</div>
+                    <div class="timeline-content">
+                        <h3>Freelance Graphic Designer</h3>
+                        <p class="company">Crown & Paw</p>
+                        <p>Created engaging visuals and marketing assets for e-commerce campaigns.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2019 – 2020</div>
+                    <div class="timeline-content">
+                        <h3>Graphic Designer</h3>
+                        <p class="company">JBC Printing Services</p>
+                        <p>Worked on print materials, layouts, and branding for local clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section class="section certifications" id="certifications">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="section-subtitle reveal">PROFESSIONAL DEVELOPMENT</h3>
+                <h2 class="section-title reveal">Licenses & <span class="text-neon">Certifications</span></h2>
+            </div>
+
+            <div class="cert-grid">
+                <!-- Cert 1 -->
+                <div class="cert-card glass-card reveal cursor-pointer" data-title="Design Thinking for Visual Communication" data-desc="Masterclass by NuBrave Academy focused on concept development and strategic branding.">
+                    <div class="cert-thumb">
+                        <img src="portfolio/assets/images/designthinking.jpg" alt="Design Thinking Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Design Thinking for Visual Communication Masterclass</h3>
+                        <p class="cert-issuer">NuBrave Academy</p>
+                        <p class="cert-date">Issued Oct 2022</p>
+                        <div class="cert-skills">
+                            <span class="skill-pill">Concept Development</span>
+                            <span class="skill-pill">Branding</span>
+                        </div>
+                        <span class="cert-link">View Certificate <i data-lucide="maximize-2"></i></span>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="cert-card glass-card reveal cursor-pointer" data-title="Graphic Design Masterclass" data-desc="Comprehensive training covering 40+ Photoshop projects, from fundamental principles to advanced techniques.">
+                    <div class="cert-thumb">
+                        <img src="portfolio/assets/images/Udemy40+Cert.jpg" alt="Graphic Design Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Graphic Design Masterclass: Design 40+ Projects in Photoshop</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-date">Issued Sep 2024</p>
+                        <div class="cert-skills">
+                            <span class="skill-pill">Adobe Photoshop</span>
+                            <span class="skill-pill">Graphic Design</span>
+                        </div>
+                        <span class="cert-link">View Certificate <i data-lucide="maximize-2"></i></span>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="cert-card glass-card reveal cursor-pointer" data-title="English for Design" data-desc="Specialized English course focused on the terminology and communication needs of design professionals.">
+                    <div class="cert-thumb">
+                        <img src="portfolio/assets/images/APC Cert.jpg" alt="English for Design Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">English for Design</h3>
+                        <p class="cert-issuer">Australian Pacific College</p>
+                        <p class="cert-date">Issued Sep 2024</p>
+                        <span class="cert-link">View Certificate <i data-lucide="maximize-2"></i></span>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="cert-card glass-card reveal cursor-pointer" data-title="Adobe Photoshop CC – Advanced Training" data-desc="Advanced professional training focusing on complex compositing, retouching, and advanced branding techniques.">
+                    <div class="cert-thumb">
+                        <img src="portfolio/assets/images/UdemyAdvancedTraining.jpg" alt="Advanced Photoshop Certificate">
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Adobe Photoshop CC – Advanced Training Course Certificate</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-date">Issued Jun 2025</p>
+                        <div class="cert-skills">
+                            <span class="skill-pill">Adobe Photoshop</span>
+                            <span class="skill-pill">Branding</span>
+                        </div>
+                        <span class="cert-link">View Certificate <i data-lucide="maximize-2"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-footer text-center reveal">
+                <p>“Committed to continuous growth, creative innovation, and industry-standard design practices.”</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="section-subtitle">Showcase</h3>
+                <h2 class="section-title">Project <span class="text-neon">Gallery</span></h2>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="filter-container reveal">
+                <div class="filter-btns-glass">
+                    <button class="filter-btn-pill active" data-category="social">Social Media</button>
+                    <button class="filter-btn-pill" data-category="redlight">Red Light Therapy</button>
+                    <button class="filter-btn-pill" data-category="brochure">Brochures</button>
+                    <button class="filter-btn-pill" data-category="brand">Brand Identity</button>
+                    <button class="filter-btn-pill" data-category="fun">Fun Projects</button>
+                </div>
+            </div>
+
+            <div class="showcase-container" id="gallery">
+                <!-- Project 1: Social Media -->
+                <div class="project-showcase showcase-item reveal" data-category="social">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Social Media Campaigns</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="portfolio/assets/images/social media campaigns.png" alt="Social Media Campaign">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>Engaging and impactful social media graphics designed to boost brand presence, drive engagement, and communicate key messages effectively.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Graphic Design • Layout • Photo Editing</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Strong visual flow across posts</li>
+                                <li>Dynamic imagery + brand-aligned color palette</li>
+                                <li>Designed for digital platforms and engagement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Red Light Therapy -->
+                <div class="project-showcase showcase-item reveal" data-category="redlight">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Red Light Therapy Ads</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="portfolio/assets/images/red light therapy 2.png" alt="Red Light Therapy Ad">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>High-conversion performance ads for advanced light therapy devices. Focused on clinical trust and aesthetic wellness appeal.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Ad Design • Creative Direction • Retouching</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Optimized for high CTR (Click-Through Rate)</li>
+                                <li>Technologically-driven visual aesthetic</li>
+                                <li>Consistent brand voice across variants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Brochure Design -->
+                <div class="project-showcase showcase-item reveal" data-category="brochure">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Brochure Portfolio</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="portfolio/assets/images/brochure.png" alt="Brochure Design">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>Multipage editorial layouts designed for print and digital distribution. Emphasis on hierarchy and legibility.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Typography • Layout System • Pre-press</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Clean grid-based organization</li>
+                                <li>Custom iconography and data visualization</li>
+                                <li>Premium paper-feel digital presentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Brand Identity -->
+                <div class="project-showcase showcase-item reveal" data-category="brand">
+                    <div class="showcase-left">
+                        <h2 class="project-large-title">Visual Identity</h2>
+                        <div class="showcase-img-wrapper cursor-pointer">
+                            <img src="portfolio/assets/images/brandidentitysugarwave copy.png" alt="Brand Identity">
+                        </div>
+                    </div>
+                    <div class="showcase-right">
+                        <div class="content-block">
+                            <span class="pill-label">Overview</span>
+                            <p>A vibrant brand identity for a futuristic music festival, blending neon visuals, rave culture, and immersive event branding across digital and print assets.</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">My Role</span>
+                            <p>Brand Identity Design • Art Direction • Visual Systems • Event Branding</p>
+                        </div>
+                        <div class="content-block">
+                            <span class="pill-label">Key Highlights</span>
+                            <ul class="highlights-list">
+                                <li>Futuristic neon-inspired visual identity</li>
+                                <li>Festival-ready graphics for tickets, wristbands, social media, and merchandise</li>
+                                <li>Cohesive branding across print and digital assets</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Fun Projects (Masonry Grid Layout) -->
+                <div class="fun-projects-masonry showcase-item reveal" data-category="fun">
+                    <div class="fun-tile cursor-pointer" data-title="Travis Scott Concept" data-desc="A vibrant retro-aesthetic poster design using complex compositing techniques.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/6e8e15141274189.62506ad3ae0e1.png" alt="Travis Scott Poster">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Visual Concept</span>
+                                    <h4>Travis Scott Poster</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fun-tile cursor-pointer" data-title="Prehistoric Storm" data-desc="A cinematic digital manipulation exploring scale and lighting in a surreal environment.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/10ace2141273311.6250679c68586.jpg" alt="Dinosaur Storm Art">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Matte Painting</span>
+                                    <h4>Prehistoric Storm</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fun-tile cursor-pointer" data-title="Fragile Identity" data-desc="A conceptual portrait piece focusing on texture mapping and emotional storytelling.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/ed7235141272803.625d28dbc04d0.jpg" alt="Cracked Face Portrait">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Digital Art</span>
+                                    <h4>Fragile Identity</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fun-tile cursor-pointer" data-title="Cyber Vigilante" data-desc="Futuristic character design with integrated neon lighting effects and digital painting.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/d75d3c141914883.625d8089d0459.jpg" alt="Cyberpunk Girl">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Character Design</span>
+                                    <h4>Cyber Vigilante</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fun-tile cursor-pointer" data-title="The Creative Lens" data-desc="Experimental composition blending realistic photography with surreal dreamlike elements.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/7cdd0b141271403.625060941e0f2.jpg" alt="Camera Lens Tracks">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Creative Compositing</span>
+                                    <h4>The Creative Lens</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fun-tile cursor-pointer" data-title="Geometric Solitude" data-desc="Study of symmetry, light, and atmosphere using 3D renders and photo manipulation.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/2da16a141272329.625063ce48673.jpg" alt="Clouds Pier Art">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Abstract Art</span>
+                                    <h4>Geometric Solitude</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fun-tile cursor-pointer" data-title="Beyond the Veil" data-desc="Surreal portrait exploration with emphasis on visual texture and composite depth.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/13caea141272893.625065dee505b.jpg" alt="Beyond the Veil Art">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Digital Portrait</span>
+                                    <h4>Beyond the Veil</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fun-tile cursor-pointer" data-title="The Noble Companion" data-desc="Classical portrait manipulation blending historical art with personal photography.">
+                        <div class="tile-inner">
+                            <img src="portfolio/assets/images/c42800141273041.625066883ddde.jpg" alt="Classical Dog Portrait">
+                            <div class="tile-overlay">
+                                <div class="tile-info">
+                                    <span>Conceptual Art</span>
+                                    <h4>The Noble Companion</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials bg-darker" id="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h3 class="section-subtitle">What Clients Say</h3>
+                <h2 class="section-title">Real feedback from <span class="text-neon">people I’ve worked with</span></h2>
+            </div>
+            
+            <div class="testimonials-grid reveal">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-header">
+                        <div class="client-info">
+                            <h4>E.L. <i data-lucide="badge-check" class="verified-icon"></i></h4>
+                            <p>Founder • Construction Company</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                    </div>
+                    <p class="testimonial-text">"We needed to update our look without losing our established reputation, which is a tough balance. Jana absolutely nailed it. The new logo she designed is bold, modern, and looks just as good on our hard hats and truck fleets as it does on our website. She listened to exactly what we were asking for and delivered."</p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-header">
+                        <div class="client-info">
+                            <h4>C.S. <i data-lucide="badge-check" class="verified-icon"></i></h4>
+                            <p>Marketing Lead • Lifestyle Brand</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I’ve worked with a lot of freelance designers and Jana is by far one of the easiest to collaborate with. She didn’t just make things look pretty. She took the time to understand our target audience. The new social templates designs completely refreshed our brand and she delivered everything with minimal revisions."</p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card glass-card">
+                    <div class="testimonial-header">
+                        <div class="client-info">
+                            <h4>G.B. <i data-lucide="badge-check" class="verified-icon"></i></h4>
+                            <p>Growth Marketing Manager</p>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                        <i data-lucide="star" class="fill-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Honestly, our Instagram and TikTok ads were getting completely ignored until Jana stepped in. She redesigned our ad creatives with visuals that actually stop people from scrolling. We started seeing much better click-through rates within the first week of running her designs. She also provided a ton of different variations so we could run proper A/B tests."</p>
+                </div>
+            </div>
+            <div class="testimonial-disclaimer text-center reveal" style="margin-top: 3rem; color: var(--secondary-color); font-size: 0.85rem; opacity: 0.7;">
+                <p>Disclaimer: Testimonials shared with permission. Some identities have been abbreviated for privacy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container grid-2">
+            <div class="contact-info reveal">
+                <h2 class="section-title">Let's Build Something <span class="text-neon">Incredible</span></h2>
+                <p>Have a project in mind or just want to say hi? I'm always open to new opportunities and creative collaborations.</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <h4>Email Me</h4>
+                            <p>janavalmorida.design@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i data-lucide="globe"></i>
+                        <div>
+                            <h4>Social & Portfolio</h4>
+                              <a href="https://www.linkedin.com/in/jana-valmorida-b20653236" target="_blank">
+                                         linkedin.com/in/jana-valmorida
+                             </a>
+                            <br>
+                            <a href="https://www.behance.net/janavalmorida1" target="_blank">
+                                      behance.net/janavalmorida1
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Manila, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container reveal">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-glow w-full">Send Message</button>
+                </form>
+                <div id="form-response" class="hidden">
+                    <p>Thanks for reaching out! I'll get back to you soon.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">JV<span>.</span></div>
+            <p>&copy; 2026 Jana Valmorida. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i data-lucide="behance"></i></a>
+                <a href="#"><i data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="dribbble"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
