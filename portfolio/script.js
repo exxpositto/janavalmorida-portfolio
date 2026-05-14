@@ -212,12 +212,70 @@ if (contactForm) {
     });
 }
 
+// Mobile Navigation Toggle
+function initMobileNav() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksActive = document.querySelectorAll('.nav-links a');
+    const logoLink = document.querySelector('.logo');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.contains('active');
+            menuToggle.innerHTML = isActive ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+            document.body.style.overflow = isActive ? 'hidden' : 'auto';
+        });
+
+        // Close menu when clicking a link
+        navLinksActive.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking the logo
+        if (logoLink) {
+            logoLink.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+}
+
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
     type();
     createParticles();
     reveal();
     setupLightbox();
+    initMobileNav();
     
     // Initial Filter (trigger first active button)
     const activeBtn = document.querySelector('.filter-btn-pill.active');

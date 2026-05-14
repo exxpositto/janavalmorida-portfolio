@@ -206,37 +206,43 @@ window.addEventListener('click', (e) => {
 const contactForm = document.getElementById('contact-form');
 const formResponse = document.getElementById('form-response');
 
-// Masonry Grid Logic
-function resizeMasonryItem(item) {
-    const grid = document.querySelector('.fun-projects-masonry');
-    const rowHeight = 10; // Matches CSS grid-auto-rows
-    const content = item.querySelector('.tile-inner');
-    
-    // Check if images in content are loaded
-    const img = content.querySelector('img');
-    if (img && !img.complete) {
-        img.addEventListener('load', () => resizeMasonryItem(item));
-        return;
-    }
+// Testimonial Slider Logic
+function initTestimonialSlider() {
+    const slider = document.getElementById('testimonial-slider');
+    const prevBtn = document.getElementById('testimonial-prev');
+    const nextBtn = document.getElementById('testimonial-next');
 
-    // Dynamic span for horizontal images
-    if (img && img.naturalWidth > img.naturalHeight * 1.3 && window.innerWidth > 768) {
-        item.classList.add('wide');
-    } else {
-        item.classList.remove('wide');
-    }
+    if (slider && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: -320, behavior: 'smooth' });
+        });
 
-    const rowSpan = Math.ceil(content.getBoundingClientRect().height / rowHeight);
-    item.style.gridRowEnd = `span ${rowSpan}`;
+        nextBtn.addEventListener('click', () => {
+            slider.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+
+        // Hide/Show buttons based on scroll position (optional but premium)
+        slider.addEventListener('scroll', () => {
+            const isAtStart = slider.scrollLeft === 0;
+            const isAtEnd = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10;
+            prevBtn.style.opacity = isAtStart ? '0.2' : '1';
+            prevBtn.style.pointerEvents = isAtStart ? 'none' : 'all';
+            nextBtn.style.opacity = isAtEnd ? '0.2' : '1';
+            nextBtn.style.pointerEvents = isAtEnd ? 'none' : 'all';
+        });
+
+        // Initial check
+        prevBtn.style.opacity = '0.2';
+        prevBtn.style.pointerEvents = 'none';
+    }
 }
 
+// Masonry Grid Logic (Updated for Regular Grid)
 function resizeAllMasonryItems() {
-    const allItems = document.querySelectorAll('.fun-tile');
-    allItems.forEach(item => {
-        if (item.offsetParent !== null) { // Only calculate for visible items
-            resizeMasonryItem(item);
-        }
-    });
+    const grid = document.querySelector('.fun-projects-masonry');
+    if (grid) {
+        // Just force a redraw if needed, but since it's a grid now, standard CSS handles it.
+    }
 }
 
 window.addEventListener('resize', resizeAllMasonryItems);
@@ -254,10 +260,6 @@ if (contactForm) {
             .then(() => {
                 alert('Message sent successfully!');
                 contactForm.reset();
-                // If you had a special UI flow like hide form/show response, you can trigger it here
-                // But instructions just say "reset the form after successful submission" and "show a success alert"
-                // The existing logic hid the form, instructions said "Do NOT redesign or modify the visual appearance"
-                // Let's stick to showing alerts and resetting as requested.
                 btn.textContent = originalText;
                 btn.disabled = false;
             }, (error) => {
@@ -269,6 +271,63 @@ if (contactForm) {
     });
 }
 
+// Mobile Navigation Toggle
+function initMobileNav() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksActive = document.querySelectorAll('.nav-links a');
+    const logoLink = document.querySelector('.logo');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            const isActive = navLinks.classList.contains('active');
+            menuToggle.innerHTML = isActive ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+            document.body.style.overflow = isActive ? 'hidden' : 'auto';
+        });
+
+        // Close menu when clicking a link
+        navLinksActive.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Close menu when clicking the logo
+        if (logoLink) {
+            logoLink.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+                if (window.lucide) {
+                    lucide.createIcons();
+                }
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+}
+
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
     emailjs.init("hnC7Y-vqNwn4TSPuk");
@@ -276,6 +335,8 @@ document.addEventListener('DOMContentLoaded', () => {
     createParticles();
     reveal();
     setupLightbox();
+    initMobileNav();
+    initTestimonialSlider();
     
     // Initial Filter (trigger first active button)
     const activeBtn = document.querySelector('.filter-btn-pill.active');

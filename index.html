@@ -266,11 +266,11 @@
             <!-- Filter Categories -->
             <div class="filter-container reveal">
                 <div class="filter-btns-glass">
-                    <button class="filter-btn-pill active" data-category="social">Social Media</button>
+                    <button class="filter-btn-pill" data-category="social">Social Media</button>
                     <button class="filter-btn-pill" data-category="redlight">Red Light Therapy</button>
                     <button class="filter-btn-pill" data-category="brochure">Brochures</button>
                     <button class="filter-btn-pill" data-category="brand">Brand Identity</button>
-                    <button class="filter-btn-pill" data-category="fun">Fun Projects</button>
+                    <button class="filter-btn-pill active" data-category="fun">Fun Projects</button>
                 </div>
             </div>
 
@@ -490,62 +490,66 @@
                 <h2 class="section-title">Real feedback from <span class="text-neon">people I’ve worked with</span></h2>
             </div>
             
-            <div class="testimonials-grid reveal">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card glass-card">
-                    <div class="testimonial-header">
-                        <div class="client-info">
-                            <h4>E.L. <i data-lucide="badge-check" class="verified-icon"></i></h4>
-                            <p>Founder • Construction Company</p>
+            <div class="testimonials-slider-container">
+                <button class="slider-btn prev" id="testimonial-prev"><i data-lucide="chevron-left"></i></button>
+                <div class="testimonials-grid testimonial-slider reveal" id="testimonial-slider">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>E.L. <i data-lucide="badge-check" class="verified-icon"></i></h4>
+                                <p>Founder • Construction Company</p>
+                            </div>
                         </div>
+                        <div class="rating">
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                        </div>
+                        <p class="testimonial-text">"We needed to update our look without losing our established reputation, which is a tough balance. Jana absolutely nailed it. The new logo she designed is bold, modern, and looks just as good on our hard hats and truck fleets as it does on our website. She listened to exactly what we were asking for and delivered."</p>
                     </div>
-                    <div class="rating">
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                    </div>
-                    <p class="testimonial-text">"We needed to update our look without losing our established reputation, which is a tough balance. Jana absolutely nailed it. The new logo she designed is bold, modern, and looks just as good on our hard hats and truck fleets as it does on our website. She listened to exactly what we were asking for and delivered."</p>
-                </div>
 
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card glass-card">
-                    <div class="testimonial-header">
-                        <div class="client-info">
-                            <h4>C.S. <i data-lucide="badge-check" class="verified-icon"></i></h4>
-                            <p>Marketing Lead • Lifestyle Brand</p>
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>C.S. <i data-lucide="badge-check" class="verified-icon"></i></h4>
+                                <p>Marketing Lead • Lifestyle Brand</p>
+                            </div>
                         </div>
+                        <div class="rating">
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                        </div>
+                        <p class="testimonial-text">"I’ve worked with a lot of freelance designers and Jana is by far one of the easiest to collaborate with. She didn’t just make things look pretty. She took the time to understand our target audience. The new social templates designs completely refreshed our brand and she delivered everything with minimal revisions."</p>
                     </div>
-                    <div class="rating">
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                    </div>
-                    <p class="testimonial-text">"I’ve worked with a lot of freelance designers and Jana is by far one of the easiest to collaborate with. She didn’t just make things look pretty. She took the time to understand our target audience. The new social templates designs completely refreshed our brand and she delivered everything with minimal revisions."</p>
-                </div>
 
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card glass-card">
-                    <div class="testimonial-header">
-                        <div class="client-info">
-                            <h4>G.B. <i data-lucide="badge-check" class="verified-icon"></i></h4>
-                            <p>Growth Marketing Manager</p>
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>G.B. <i data-lucide="badge-check" class="verified-icon"></i></h4>
+                                <p>Growth Marketing Manager</p>
+                            </div>
                         </div>
+                        <div class="rating">
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                            <i data-lucide="star" class="fill-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Honestly, our Instagram and TikTok ads were getting completely ignored until Jana stepped in. She redesigned our ad creatives with visuals that actually stop people from scrolling. We started seeing much better click-through rates within the first week of running her designs. She also provided a ton of different variations so we could run proper A/B tests."</p>
                     </div>
-                    <div class="rating">
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                        <i data-lucide="star" class="fill-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Honestly, our Instagram and TikTok ads were getting completely ignored until Jana stepped in. She redesigned our ad creatives with visuals that actually stop people from scrolling. We started seeing much better click-through rates within the first week of running her designs. She also provided a ton of different variations so we could run proper A/B tests."</p>
                 </div>
+                <button class="slider-btn next" id="testimonial-next"><i data-lucide="chevron-right"></i></button>
             </div>
-            <div class="testimonial-disclaimer text-center reveal" style="margin-top: 3rem; color: var(--secondary-color); font-size: 0.85rem; opacity: 0.7;">
+            <div class="testimonial-disclaimer text-center reveal">
                 <p>Disclaimer: Testimonials shared with permission. Some identities have been abbreviated for privacy.</p>
             </div>
         </div>
