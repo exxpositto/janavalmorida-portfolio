@@ -244,28 +244,34 @@ window.addEventListener('resize', resizeAllMasonryItems);
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Simulate form submission
+        
         const btn = contactForm.querySelector('button');
         const originalText = btn.textContent;
         btn.textContent = 'Sending...';
         btn.disabled = true;
 
-        setTimeout(() => {
-            contactForm.classList.add('hidden');
-            formResponse.classList.remove('hidden');
-            
-            // Log form data as placeholder for real submission
-            console.log('Form Submitted:', {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
+        emailjs.sendForm('service_w1ykbbq', 'template_3i5m75s', contactForm)
+            .then(() => {
+                alert('Message sent successfully!');
+                contactForm.reset();
+                // If you had a special UI flow like hide form/show response, you can trigger it here
+                // But instructions just say "reset the form after successful submission" and "show a success alert"
+                // The existing logic hid the form, instructions said "Do NOT redesign or modify the visual appearance"
+                // Let's stick to showing alerts and resetting as requested.
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, (error) => {
+                console.error('EmailJS Error:', error);
+                alert('Failed to send message. Please try again later.');
+                btn.textContent = originalText;
+                btn.disabled = false;
             });
-        }, 1500);
     });
 }
 
 // Initialization
 document.addEventListener('DOMContentLoaded', () => {
+    emailjs.init("hnC7Y-vqNwn4TSPuk");
     type();
     createParticles();
     reveal();

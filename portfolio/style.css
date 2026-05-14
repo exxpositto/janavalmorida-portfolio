@@ -114,8 +114,16 @@ h1, h2, h3, h4 {
     letter-spacing: -1px;
 }
 
-.logo span {
-    color: var(--neon-blue);
+.logo-img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: var(--transition);
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -803,11 +811,10 @@ footer {
 .footer-logo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--text-color);
 }
 
-.footer-logo span {
-    color: var(--neon-blue);
+.footer-logo .logo-img {
+    height: 30px;
 }
 
 .social-links {
@@ -836,6 +843,12 @@ footer {
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 28px;
+    }
 }
 
 @keyframes float {

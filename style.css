@@ -114,8 +114,16 @@ h1, h2, h3, h4 {
     letter-spacing: -1px;
 }
 
-.logo span {
-    color: var(--neon-blue);
+.logo-img {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: var(--transition);
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.05);
 }
 
 .nav-links {
@@ -1167,8 +1175,8 @@ footer {
     font-weight: 800;
 }
 
-.footer-logo span {
-    color: var(--neon-blue);
+.footer-logo .logo-img {
+    height: 30px;
 }
 
 footer p {
@@ -1218,6 +1226,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    .logo-img {
+        height: 28px;
+    }
+    
     .nav-links {
         display: none;
     }
