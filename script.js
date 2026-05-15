@@ -211,18 +211,61 @@ function initTestimonialSlider() {
     const slider = document.getElementById('testimonial-slider');
     const prevBtn = document.getElementById('testimonial-prev');
     const nextBtn = document.getElementById('testimonial-next');
+    const dotsContainer = document.getElementById('testimonial-dots');
 
     if (slider && prevBtn && nextBtn) {
+        const cards = slider.querySelectorAll('.testimonial-card');
+        
+        // Create dots if container exists
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            cards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'dot' + (index === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    const gap = parseInt(window.getComputedStyle(slider).gap || 0);
+                    const cardWidth = cards[0].offsetWidth;
+                    const step = cardWidth + gap;
+                    slider.scrollTo({
+                        left: index * step,
+                        behavior: 'smooth'
+                    });
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
         prevBtn.addEventListener('click', () => {
-            slider.scrollBy({ left: -320, behavior: 'smooth' });
+            const gap = parseInt(window.getComputedStyle(slider).gap || 0);
+            const cardWidth = cards[0].offsetWidth;
+            const step = cardWidth + gap;
+            slider.scrollBy({ left: -step, behavior: 'smooth' });
         });
 
         nextBtn.addEventListener('click', () => {
-            slider.scrollBy({ left: 320, behavior: 'smooth' });
+            const gap = parseInt(window.getComputedStyle(slider).gap || 0);
+            const cardWidth = cards[0].offsetWidth;
+            const step = cardWidth + gap;
+            slider.scrollBy({ left: step, behavior: 'smooth' });
         });
 
-        // Hide/Show buttons based on scroll position (optional but premium)
+        // Update dots and buttons on scroll
         slider.addEventListener('scroll', () => {
+            if (dotsContainer) {
+                const scrollLeft = slider.scrollLeft;
+                const gap = parseInt(window.getComputedStyle(slider).gap || 0);
+                const cardWidth = cards[0].offsetWidth;
+                const step = cardWidth + gap;
+                
+                // Calculate active index based on step
+                const activeIndex = Math.round(scrollLeft / (step || 1));
+                
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeIndex);
+                });
+            }
+
             const isAtStart = slider.scrollLeft === 0;
             const isAtEnd = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10;
             prevBtn.style.opacity = isAtStart ? '0.2' : '1';
